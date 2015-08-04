@@ -125,7 +125,7 @@
             rY = " rotateY(" + r.y + "deg) ",
             rZ = " rotateZ(" + r.z + "deg) ";
         
-        return revert ? rZ+rY+rX : rX+rY+rZ;
+        return !revert ? rZ+rY+rX : rX+rY+rZ; //> HACKED THIS SHIT --> HELP FROM MORGAN
     };
     
     // `scale` builds a scale transform string for given data.
