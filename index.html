@@ -11,15 +11,98 @@
 
   <body>
 
-    <div class="impress">
+    <div id="impress">
+        
+      <div id='side-one' class="step chris-step" data-x='0' data-y='0' data-rotate-z='10' data-scale='1' >
+        
+        <p class="code-content">
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+&lt;div id='side-one' class=&quot;step&quot; data-x='0' data-y='0' data-scale='1' &gt;
+
+NEXT SLIDE:
+
+&lt;div id='side-two' class=&quot;step&quot; data-x='0' data-y='-250' data-z='-250' data-rotate-x='90'
+  data-scale='1'&gt;
+
+            </code> <!-- END CODE CONTENT -->
+          </pre>
+        </p> 
+
+      </div> <!-- END SLIDE ONE -->
+
+      <div id='side-two' class="step chris-step" data-x='50' data-y='-250' data-z='-250' data-rotate-y='10' data-rotate-x='90' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+&lt;div id='side-two' class=&quot;step&quot; data-x='0' data-y='-250' data-z='-250' data-rotate-x='90'
+  data-scale='1'&gt;
+
+NEXT SLIDE: 
+&lt;div id='side-three' class=&quot;step&quot; data-x='120' data-y='0' data-z='-250' data-rotate-x='180'
+  data-scale='1'&gt;
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE TWO -->
+
+      <div id='side-three' class="step chris-step" data-x='0' data-y='0' data-z='-500' data-rotate-z='-10' data-rotate-x='180' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+&lt;div id='side-three' class=&quot;step&quot; data-x='0' data-y='0' data-z='-250' data-rotate-x='180'
+  data-scale='1'&gt;
+
+NEXT SLIDE: 
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE THREE -->
+
+<!-- ================================= slide - four ========================= -->
+      <div id='side-four' class="step chris-step" data-x='-50' data-y='250' data-z='-250' data-rotate-x='270' data-rotate-y='-10' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+&lt;div id='side-four' class=&quot;step&quot; data-x='0' data-y='250' data-z='-250' data-rotate-x='270' 
+  data-rotate-z='10' data-scale='1'&gt;
+
+NEXT SLIDE: 
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE FOUR -->
+
+
+
+
+
+
+      <div id='overview' class="step" data-scale='2'></div>
       
-      
-    <div class="checking"></div>
-    
     </div>
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js'></script>
-    <script src="main.js"></script>
+    <script type='text/javascript' src='impress.js'></script>
+    <script type='text/javascript'>impress().init();</script>
+
 
   </body>
 </html>

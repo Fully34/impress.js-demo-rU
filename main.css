@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+.step {
+  /*background-color: peachpuff;*/
+  /*opacity: 0.3;*/
+  padding: 50px;
+  margin: 10px;
+
+}
+
+.chris-step {
+  color: #03FF00;
+  background-color: black;
+  border-radius : 30px;
+  box-shadow: 0px 0px 30px 1px rgba(3,255,0,1);
+}
+
+
+.step.active {
+  opacity: 1;
+}
+
+#overview {
+  display: none;
+}
+
+/*
+      <div id='side-four' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+
+NEXT SLIDE: 
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE FOUR -->
+
+
+
+      <div id='side-five' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+
+
+NEXT SLIDE: 
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE FIVE -->
+
+
+
+      <div id='side-six' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
+        
+        <p class='code-content'>
+          <pre>
+            <code>
+
+CURRENT SLIDE:
+
+
+
+NEXT SLIDE: 
+
+            </code> <!-- END  CODE CONTENT --> 
+          </pre>
+        </p>
+      </div> <!-- END SLIDE SIX -->*/
