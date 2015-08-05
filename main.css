@@ -43,3 +43,45 @@ code {
 #overview {
   display: none;
 }
+/*Ronan CSS*/
+p {
+	font-size: 24px;
+}
+
+.ing.present .rotating {
+	transition-delay: 1s;
+	transform: rotate(-360deg);
+}
+.ing.present .rotating-2 {
+	transition-delay: 0.5s;
+	transform: rotate(190deg);
+}
+
+.ing.present .positioning-1 {
+	transform: translateX(40px);
+	transition-delay: 0.65s;
+}
+.ing.present .positioning-2 {
+	transform: translateX(-40px);
+	transition-delay: 0.65s;
+}
+
+.ing.present .scaling-1 {
+	transform: scale(1.25);
+	transition-delay: 0.3s;
+}
+
+.ing.present .scaling-2 {
+	transform: scale(1.5);
+	transition-delay: 0.5s;
+}
+
+.ing.present .scaling-3 {
+	transform: scale(2);
+	transition-delay: 0.7s;
+}
+
+.ing b {
+	display: inline-block;
+	transition-duration: 0.95s;
+}
