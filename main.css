@@ -1,3 +1,6 @@
+
+/*==============================  utility  =============================*/
+        
 *{
   box-sizing: border-box;
 }
@@ -5,6 +8,9 @@
 body {
   background-color: #A0AE99;
 }
+
+/*==============================  custom styles  =============================*/
+
 .step {
   /*background-color: peachpuff;*/
   opacity: 0.3;
@@ -31,58 +37,3 @@ code {
 #overview {
   display: none;
 }
-
-/*
-      <div id='side-four' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
-        
-        <p class='code-content'>
-          <pre>
-            <code>
-
-CURRENT SLIDE:
-
-
-NEXT SLIDE: 
-
-            </code> <!-- END  CODE CONTENT --> 
-          </pre>
-        </p>
-      </div> <!-- END SLIDE FOUR -->
-
-
-
-      <div id='side-five' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
-        
-        <p class='code-content'>
-          <pre>
-            <code>
-
-CURRENT SLIDE:
-
-
-
-NEXT SLIDE: 
-
-            </code> <!-- END  CODE CONTENT --> 
-          </pre>
-        </p>
-      </div> <!-- END SLIDE FIVE -->
-
-
-
-      <div id='side-six' class="step" data-x='0' data-y='-250' data-z='-250' data-rotate-x='90' data-scale='1'>
-        
-        <p class='code-content'>
-          <pre>
-            <code>
-
-CURRENT SLIDE:
-
-
-
-NEXT SLIDE: 
-
-            </code> <!-- END  CODE CONTENT --> 
-          </pre>
-        </p>
-      </div> <!-- END SLIDE SIX -->*/

@@ -12,114 +12,134 @@
   <body>
 
     <div id="impress">
-        
+
+  <!-- ============================ Chris Slides start here ====================== -->
+
+<!-- ================================= side - ONE =================================== -->
+
       <div id='side-one' class="step chris-step" data-x='0' data-y='0' data-rotate-z='10' data-scale='1' >
         
         <h3 class="code-content">
           THIS IS SIDE 1 -> CHECK OUT THAT CODE!!!
-        </h3> 
-        <pre>
-CURRENT SLIDE:
+        </h3>
+          <pre>
+<p> - Set first side to the x = 0, y = 0
+      - Flat plane on original x/y axes</p>
+CURRENT SIDE:
 <code>
 &lt;div id='side-one' class=&quot;step chris-step&quot; data-x='0' data-y='0' data-rotate-z='10' 
   data-scale='1' &gt;
 </code>
-NEXT SLIDE:
+NEXT SIDE:
 <code>
 &lt;div id='side-two' class=&quot;step chris-step&quot; data-x='50' data-y='-250' data-z='-250' data-rotate
   -z='10' data-rotate-x='90' data-scale='1'&gt;
 </code>
 
-        </pre>
+          </pre>
 
-      </div> <!-- END SLIDE ONE -->
+      </div> <!-- END SIDE ONE -->
 
-      <div id='side-two' class="step chris-step" data-x='50' data-y='-250' data-z='-250' data-rotate-z='10' data-rotate-x='90' data-scale='1'>
+<!-- ================================= side - TWO =================================== -->
+
+      <div id='side-two' class="step chris-step" data-x='50' data-y='-300' data-z='-300' data-rotate-z='10' data-rotate-x='90' data-scale='1'>
         
         <h3 class='code-content rotate'>
           SIDE TWO!!!
         </h3>
           <pre>
-
-CURRENT SLIDE:
+<p> - y-axis and z-axis have now switched places relatively, x-axis remains 
+      stationary
+      - Positioned slide up y-axis and into the page on z-axis by -250
+      - We are looking down from the top</p>
+CURRENT SIDE:
 <code>
 &lt;div id='side-two' class=&quot;step chris-step&quot; data-x='50' data-y='-250' data-z='-250' data-rotate
   -z='10' data-rotate-x='90' data-scale='1'&gt;
 </code>
-
-NEXT SLIDE:
+NEXT SIDE:
 <code>
-&lt;div id='side-three' class=&quot;step chris-step&quot; data-x='0' data-y='0' data-z='-500' data-
+&lt;div id='side-three' class=&quot;step chris-step&quot; data-x='0' data-y='0' data-z='-600' data-
   rotate-z='10' data-rotate-x='180' data-scale='1'&gt;
 </code>
 
           </pre>
-      </div> <!-- END SLIDE TWO -->
+      </div> <!-- END SIDE TWO -->
 
-      <div id='side-three' class="step chris-step" data-x='0' data-y='0' data-z='-500' data-rotate-z='10' data-rotate-x='180' data-scale='1'>
+<!-- ================================= side - THREE=================================== -->
+
+      <div id='side-three' class="step chris-step" data-x='0' data-y='0' data-z='-600' data-rotate-z='10' data-rotate-x='180' data-scale='1'>
         
         <h3 class='code-content'>
           SIDE 3!!!
         </h3>
           <pre>
-CURRENT SLIDE:
-
+<p> - y-axis and z-axis back to normal orientations, except now they are upside-down
+      - Think inversion of the first side
+      - We are looking at the back of the first side upside-down</p>
+CURRENT SIDE:
 <code>
-&lt;div id='side-three' class=&quot;step chris-step&quot; data-x='0' data-y='0' data-z='-500' data-
+&lt;div id='side-three' class=&quot;step chris-step&quot; data-x='0' data-y='0' data-z='-600' data-
   rotate-z='10' data-rotate-x='180' data-scale='1'&gt;
 </code> 
-NEXT SLIDE: 
+NEXT SIDE: 
 <code>
 &lt;div id='side-four' class=&quot;step chris-step&quot; data-x='-50' data-y='250' data-z='-250' data-rotate
   -x='270' data-rotate-z='10' data-scale='1'&gt;
 </code>
 
           </pre>
-      </div> <!-- END SLIDE THREE -->
+      </div> <!-- END SIDE THREE -->
 
-<!-- ================================= slide - four ========================= -->
+<!-- ================================= side - FOUR ========================= -->
 
-      <div id='side-four' class="step chris-step" data-x='-50' data-y='250' data-z='-250' data-rotate-x='270' data-rotate-z='10' data-scale='1'>
+      <div id='side-four' class="step chris-step" data-x='-50' data-y='300' data-z='-300' data-rotate-x='270' data-rotate-z='10' data-scale='1'>
         
         <h3 class='code-content'>
           LAST SIDE!!!
         </h3>
           <pre>
-
-CURRENT SLIDE:
-
+<p> - y-axis and z-axis swap orientation again, still upside-down
+      - Inversion of the second side
+      - We are looking up from the bottom</p>
+CURRENT SIDE:
 <code>
 &lt;div id='side-four' class=&quot;step chris-step&quot; data-x='-50' data-y='250' data-z='-250' data-rotate
   -x='270' data-rotate-z='10' data-scale='1'&gt;
 </code>
           </pre>
-      </div> <!-- END SLIDE FOUR -->
+      </div> <!-- END SIDE FOUR -->
 
-<!-- ================================= slide - five ========================= -->
+<!-- ================================= side - FIVE =================================== -->
 
-      <div id='side-five' class="step chris-step" data-x='-2000' data-y='-352' data-z='-250' data-rotate-y='-90' data-rotate-x='10'>
+      <div id='side-five' class="step chris-step" data-x='-4000' data-y='-704' data-z='-250' data-rotate-y='-90' data-rotate-x='10'>
   
         <h3 class='code-content'>
           PSYCHE!!!
         </h3>
           <pre>
-
-CURRENT SLIDE:
-
+<p> - Rotate the plane perpendicular to the line of the initial slide.
+      - Used trigonometry to determine height of this slide on Y-axis in relation to the distance
+        from the main box on the X-axis 
+      - Morgan helped with figuring out the proper rotation order here (modified impress.js
+        source code) </p>
+CURRENT SIDE:
 <code>
-&lt;div id='side-five' class=&quot;step chris-step&quot; data-x='-2000' data-y='-352' data-z='-250'
-  data-rotate-y='-90' data-rotate-x='10'&gt;
+&lt;div id='side-five' class=&quot;step chris-step&quot; data-x='-4000' data-y='-704' data-z='-250'
+  data-rotate-y='-90' data-rotate-x='10'&gt; 
 </code>
           </pre>  
       </div>
 
+<!-- ================================= overview SLIDE =================================== -->
 
-
+    <!-- ============================ Chris Slides end here ====================== -->
 
       <div id='overview' class="step" data-scale='2'></div>
-      
-    </div>
+
+</div> <!-- END IMPRESS CONATAINER --> 
     
+    <!--  add and initialize impress.js -->
     <script type='text/javascript' src='impress.js'></script>
     <script type='text/javascript'>impress().init();</script>
 
