@@ -1,3 +1,27 @@
+/**
+ * impress.js
+ *
+ * impress.js is a presentation tool based on the power of CSS3 transforms and transitions
+ * in modern browsers and inspired by the idea behind prezi.com.
+ *
+ *
+ * Copyright 2011-2012 Bartek Szopka (@bartaz)
+ *
+ * Released under the MIT and GPL Licenses.
+ *
+ * ------------------------------------------------
+ *  author:  Bartek Szopka
+ *  version: 0.5.3
+ *  url:     http://bartaz.github.com/impress.js/
+ *  source:  http://github.com/bartaz/impress.js/
+ */
+
+/*jshint bitwise:true, curly:true, eqeqeq:true, forin:true, latedef:true, newcap:true,
+         noarg:true, noempty:true, undef:true, strict:true, browser:true */
+
+// You are one of those who like to know how things work inside?
+// Let me show you the cogs that make impress.js run...
+
 (function ( document, window ) {
     'use strict';
     
@@ -102,7 +126,9 @@
             rY = " rotateY(" + r.y + "deg) ",
             rZ = " rotateZ(" + r.z + "deg) ";
         
-        return revert ? rZ+rY+rX : rX+rY+rZ;
+
+        return !revert ? rZ+rY+rX : rX+rY+rZ; //> HACKED THIS SHIT --> HELP FROM MORGAN
+
     };
     
     // `scale` builds a scale transform string for given data.
@@ -167,8 +193,9 @@
     }
     
     // GLOBALS AND DEFAULTS
-    
-    // This is were the root elements of all impress.js instances will be kept.
+
+    // This is where the root elements of all impress.js instances will be kept.
+
     // Yes, this means you can have more than one instance on a page, but I'm not
     // sure if it makes any sense in practice ;)
     var roots = {};
@@ -187,6 +214,14 @@
     
     // it's just an empty function ... and a useless comment.
     var empty = function () { return false; };
+
+    
+    // IMPRESS.JS API
+    
+    // And that's where interesting things will start to happen.
+    // It's the core `impress` function that returns the impress.js API
+    // for a presentation based on the element with given id ('impress'
+    // by default).
 
     var impress = window.impress = function ( rootId ) {
         
@@ -457,7 +492,14 @@
                 onStepLeave(activeStep);
             }
             
-        
+            // Now we alter transforms of `root` and `canvas` to trigger transitions.
+            //
+            // And here is why there are two elements: `root` and `canvas` - they are
+            // being animated separately:
+            // `root` is used for scaling and `canvas` for translate and rotations.
+            // Transitions on them are triggered with different delays (to make
+            // visually nice and 'natural' looking transitions), so we need to know
+            // that both of them are finished.
             css(root, {
                 // to keep the perspective look similar for different scales
                 // we need to 'scale' the perspective, too
@@ -472,7 +514,17 @@
                 transitionDelay: (zoomin ? 0 : delay) + "ms"
             });
             
-            
+
+            // Here is a tricky part...
+            //
+            // If there is no change in scale or no change in rotation and translation, it means there was actually
+            // no delay - because there was no transition on `root` or `canvas` elements.
+            // We want to trigger `impress:stepenter` event in the correct moment, so here we compare the current
+            // and target values to check if delay should be taken into account.
+            //
+            // I know that this `if` statement looks scary, but it's pretty simple when you know what is going on
+            // - it's simply comparing all the values.
+
             if ( currentState.scale === target.scale ||
                 (currentState.rotate.x === target.rotate.x && currentState.rotate.y === target.rotate.y &&
                  currentState.rotate.z === target.rotate.z && currentState.translate.x === target.translate.x &&
@@ -519,8 +571,21 @@
             
             return goto(next);
         };
-        
-     
+
+        // Adding some useful classes to step elements.
+        //
+        // All the steps that have not been shown yet are given `future` class.
+        // When the step is entered the `future` class is removed and the `present`
+        // class is given. When the step is left `present` class is replaced with
+        // `past` class.
+        //
+        // So every step element is always in one of three possible states:
+        // `future`, `present` and `past`.
+        //
+        // There classes can be used in CSS to style different types of steps.
+        // For example the `present` class can be used to trigger some custom
+        // animations when step is shown.
+
         root.addEventListener("impress:init", function(){
             // STEP CLASSES
             steps.forEach(function (step) {
@@ -545,13 +610,26 @@
             
             // last hash detected
             var lastHash = "";
-       
+
+            
+            // `#/step-id` is used instead of `#step-id` to prevent default browser
+            // scrolling to element in hash.
+            //
+            // And it has to be set after animation finishes, because in Chrome it
+            // makes transtion laggy.
+            // BUG: http://code.google.com/p/chromium/issues/detail?id=62820
             root.addEventListener("impress:stepenter", function (event) {
                 window.location.hash = lastHash = "#/" + event.target.id;
             }, false);
             
             window.addEventListener("hashchange", function () {
-        
+
+                // When the step is entered hash in the location is updated
+                // (just few lines above from here), so the hash change is 
+                // triggered and we would call `goto` again on the same element.
+                //
+                // To avoid this we store last entered hash and compare.
+
                 if (window.location.hash !== lastHash) {
                     goto( getElementFromHash() );
                 }
@@ -619,8 +697,22 @@
                 event.preventDefault();
             }
         }, false);
+  // Trigger impress action (next or prev) on keyup.
         
-        
+        // Supported keys are:
+        // [space] - quite common in presentation software to move forward
+        // [up] [right] / [down] [left] - again common and natural addition,
+        // [pgdown] / [pgup] - often triggered by remote controllers,
+        // [tab] - this one is quite controversial, but the reason it ended up on
+        //   this list is quite an interesting story... Remember that strange part
+        //   in the impress.js code where window is scrolled to 0,0 on every presentation
+        //   step, because sometimes browser scrolls viewport because of the focused element?
+        //   Well, the [tab] key by default navigates around focusable elements, so clicking
+        //   it very often caused scrolling to focused element and breaking impress.js
+        //   positioning. I didn't want to just prevent this default action, so I used [tab]
+        //   as another way to moving to next step... And yes, I know that for the sake of
+        //   consistency I should add [shift+tab] as opposite action...
+
         document.addEventListener("keyup", function ( event ) {
             if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
                 switch( event.keyCode ) {
@@ -711,3 +803,11 @@
         
 })(document, window);
 
+
+// THAT'S ALL FOLKS!
+//
+// Thanks for reading it all.
+// Or thanks for scrolling down and reading the last part.
+//
+// I've learnt a lot when building impress.js and I hope this code and comments
+// will help somebody learn at least some part of it.
