@@ -3,7 +3,7 @@
   <head>
     
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Peer-Group Impress Presentation</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 
@@ -11,14 +11,40 @@
 
   <body>
 
-    <div class="impress">
-      
+    <div id="impress">
+        
+        <div id="big" class="step Ash" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+            <pre>
+              <p><b>And now...</b>it get's very exciting! We move into third dimension!
+              <p>Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with `data-z`.</p>
+              <code>&ltdiv id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6"a&gt</code>
+            </pre>
+        </div>
+
+
+      <div id="tiny" class="step Ash" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+          <pre>           
+            <h3>CSS Transformation Syntax</h3>
+            <p>The element should be positioned far away from us (by 3000px).</p>
+            <code>     css(el, {
+                position: "absolute",
+                transform: "translate(-50%,-50%)" +
+                           translate(step.translate) +
+                           rotate(step.rotate) +
+                           scale(step.scale),
+                transformStyle: "preserve-3d"
+            });
+        }; </code>
+          </pre>
+      </div>
       
 
     </div>
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js'></script>
-    <script src="main.js"></script>
+
+    <script src="impress.js"></script>
+    <script>impress().init();</script>
+
 
   </body>
 </html>
