@@ -60,17 +60,13 @@ code {
 
 /*==============================  ronan styles  =============================*/
         
-p {
+/*p {
 	font-size: 24px;
-}
+}*/
 
 .ing.present .rotating {
 	transition-delay: 1s;
 	transform: rotate(-360deg);
-}
-.ing.present .rotating-2 {
-	transition-delay: 0.5s;
-	transform: rotate(190deg);
 }
 
 .ing.present .positioning-1 {
@@ -88,12 +84,12 @@ p {
 }
 
 .ing.present .scaling-2 {
-	transform: scale(1.5);
+	transform: scale(1.9);
 	transition-delay: 0.5s;
 }
 
 .ing.present .scaling-3 {
-	transform: scale(2);
+	transform: scale(2.3);
 	transition-delay: 0.7s;
 }
 
@@ -102,6 +98,9 @@ p {
 	transition-duration: 0.95s;
 }
 
+.ing {
+  font-size: 40px;
+}
 
 .steve {
 	font-size: 100%;
