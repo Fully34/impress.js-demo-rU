@@ -13,40 +13,69 @@
   <body>
 
     <div id="impress">
+
   <!-- ============================ Laura Slides start here ====================== -->
-    <div id="impress">
-      <div id="step1" class="step slide" data-x="-1000" data-y="-1500">
-          Welcome to impress.js! This is the first slide of this presentation framework. Each step of the presentation should be an element inside of a div with an id name of 'impress' and a class name of 'step'. These 'step' elements are positioned, rotated and scaled by impress.js, and the 'camera' shows them on each step of the presentation. 
+
+      <div id="impress">
+        <div id="step1" class="step slide laura" data-x="-1500" data-y="-2000">
+          <pre>
+            
+  Welcome to impress.js! This is the first slide of this presentation framework. Each step of the
+  presentation should be an element inside of a div with an id name of 'impress' and a class name
+  of 'step'. These 'step' elements are positioned, rotated and scaled by impress.js, and the
+  'camera' shows them on each step of the presentation. 
+
+          </pre>
         </div>
 
-        <div id="step2" class="step slide" data-x="0" data-y="-1500">
-        Positioning information is passed through data attributes. The first three steps of the presentation are not scaled or rotated. Therefore, we only specify an x and y position of these step elements. The first step was positioned with 'data-x="-1000"' and 'data-y="-1500"' attributes. This means that the center of the element (yes, the center) will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.          
+        <div id="step2" class="step slide laura" data-x="0" data-y="-2000">
+          <pre>
+            
+  Positioning information is passed through data attributes. The first three steps of the
+  presentation are not scaled or rotated. Therefore, we only specify an x and y position of
+  these step elements. The first step was positioned with 'data-x="-1500"' and 'data-y="-2000"'
+  attributes. This means that the center of the element (yes, the center) will be positioned 
+  in point x = -1000px and y = -2000px of the presentation 'canvas'.          
+
+          </pre>
         </div>
 
-        <div id="step3" class="step slide" data-x="1000" data-y="-1500">
-          The 'id' attribute of the step element is used to identify it in the URL, but it is optional. If it is not defined, each step will get a default value of 'step-N' where N is a number of slide. The hash part of the URL when this step is active will be '#/step-2'. You can also use '#step-2' in a link, to point directly to this particular step.
+        <div id="step3" class="step slide laura" data-x="1500" data-y="-2000">
+          <pre>
+            
+  The 'id' attribute of the step element is used to identify it in the URL, but it is optional. 
+  If it is not defined, each step will get a default value of 'step-N' where N is a number of 
+  slide. The hash part of the URL when this step is active will be '#/step-2'. You can also use
+  '#step-2' in a link, to point directly to this particular step.
+
+          </pre>
         </div>
 
-        <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-          <span class="try">This is a scaled element dictated by the data attribute 'data-scale="4"'. This means that this element is 4 times larger than the others.</span>
-          <h1>Title Step</h1>
-          <span class="footnote">From presentation and transitions point of view it means, that it will have to be scaled down (4 times) to make it back to its correct size.</span>     
+        <div id="title" class="step laura" data-x="5000" data-y="-2000" data-scale="4">
+          <pre>
+        
+  <span class="try">This is a scaled element dictated by the data attribute 'data-scale="4"'. 
+  This means that this element is 4 times larger than the others.</span>
+  <h1>Title Step</h1>
+  <span class="footnote">From presentation and transitions point of view it means, that it will
+  have to be scaled down (4 times) to make it back to its correct size.</span>     
+          </pre>
+        </div>
 
-    </div>
   <!-- ============================ Laura Slides end here ====================== -->
 
-    <!-- ============================ Steve's Slides start here ====================== -->
+  <!-- ============================ Steve's Slides start here ====================== -->
 
 
-      <div class="step steve" data-x="1000" data-y="1000" data-z="1000">
+        <div class="step steve" data-x="5000" data-y="-900">
 <pre>
           <h2>At it's most basic, data-rotate-z</h2>
           <h2>spins the canvas on the vertical axis</h2>
           <h2>and moves to the next slide.</h2>
 </pre>
-      </div>
+        </div>
 
-      <div class="step steve" data-x="-1500" data-y="1500" data-z="1500" data-rotate-z="-360">
+        <div class="step steve" data-x="6500" data-y="-3250" data-rotate-z="-360">
 <pre>
           <h2>We've just moved from</h2>
           <h2>1000 pixels horizontally</h2>
@@ -63,9 +92,9 @@
 
 
         
-      </div>
+        </div>
 
-<div class="step steve" data-x="-2500" data-y="2000" data-z="-2000" data-rotate-z="360">
+        <div class="step steve" data-x="4500" data-y="-3100" data-rotate-z="360">
 <pre>
           <h2>-1500 pixels horizontal</h2>
           <h2>1500 pixels vertical</h2>
@@ -74,58 +103,46 @@
 <code>
   data-x="-1500" data-y="1500" data-z="1500"
 </code>
-
 </pre>
-      </div>
+        </div>
 
-      <div class="step steve" data-x="1500" data-y="-1500" data-z="1500" data-rotate-x="-360" data-rotate-y="-180" data-rotate-z="-360">
+      <div class="step steve" data-x="5500" data-y="-3150" data-rotate-x="-360" data-rotate-y="-180" data-rotate-z="-360" data-scale='2'>
 <pre>
           <h2>Fuck yeah!</h2>
 
 </pre>
-      </div>
+        </div>
 
-          <!-- ============================ Steve's Slides end here ====================== -->
-
+  <!-- ============================ Steve's Slides end here ====================== -->
 
   <!-- ============================ Ronan Slides start here ====================== -->
-      <div  class="step ing" data-x="0" data-y="0" data-scale="5">
-<pre>
-        <p>   
-        
-        <b class="scaling-1"> do</b>
-        <b class="scaling-2"> some</b>
-        <b class="scaling-3"> scaling</b>
-<code>
+      <div  class="step ing" data-x="3000" data-y="0" data-scale="6">
+<pre>   
+      <b class="scaling-1"> do</b>
+      <b class="scaling-2"> some</b>
 
+      <b class="scaling-3"> scaling</b>
+<code>
 .ing.present .scaling-1 {
   transform: scale(1.25);
   transition-delay: 0.3s;
 }
-
 </code>
-
-        </p>
 </pre>
       </div>
       
-      <div  data-rotate="-90" class="ing step present active" data-x="0" data-y="6000" data-scale="5" style="position: absolute; transform: translate(-50%, -50%) translate3d(3500px, -850px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(270deg) scale(6); transform-style: preserve-3d;">
+      <div  data-rotate="-90" class="ing step" data-x="0" data-y="6000" data-scale="5" style="position: absolute; transform: translate(-50%, -50%) translate3d(3500px, -850px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(270deg) scale(6); transform-style: preserve-3d;">
 <pre>
 
-    <p>
       <b class="positioning-1"> nothing wrong with</b>
       <b class="positioning-2"> positioning:</b>
 
-    <code> 
-
-.ing.present .positioning {
-  transform: translatex(70px);
-  transition-delay: 0.65s;
-}
-
- </code>
-    
-        </p>
+<div class = 'code'>
+        .ing.present .positioning {
+          transform: translatex(70px);
+          transition-delay: 0.65s;
+        }
+</div>
 </pre>
 
       </div>
@@ -135,19 +152,19 @@
         <p>   
         
           why not <b class="rotating">rotate?</b>
-<code class="rotating-2">
-
-.ing.present .scaling-1 {
-  transform: scale(1.25);
-  transition-delay: 0.3s;
-}
-  
-</code>
+<!-- <code class="rotating-2"> -->
+<div class="code">
+      .ing.present .scaling-1 {
+        transform: scale(1.25);
+        transition-delay: 0.3s;
+      }
+</div>
       </p>
     </pre>
         </div>
 
   <!-- ============================ Ronan Slides end here ====================== -->
+
   <!-- ============================ Ashley Slides start here ====================== -->
 
         <div id="big" class="step Ash" data-x="-5000" data-y="700" data-rotate-z="10" data-scale="6">
@@ -180,11 +197,9 @@ css(el, {
       </div>
   <!-- ============================ Ashley Slides end here ====================== -->
       
-
-
   <!-- ============================ Chris Slides start here ====================== -->
 
-<!-- ================================= side - ONE =================================== -->
+  <!-- ================================= side - ONE =================================== -->
 
       <div id='side-one' class="step chris-step" data-x='0' data-y='0' data-rotate-z='10' data-scale='1' >
         
@@ -209,7 +224,7 @@ NEXT SIDE:
 
       </div> <!-- END SIDE ONE -->
 
-<!-- ================================= side - TWO =================================== -->
+  <!-- ================================= side - TWO =================================== -->
 
       <div id='side-two' class="step chris-step" data-x='50' data-y='-300' data-z='-300' data-rotate-z='10' data-rotate-x='90' data-scale='1'>
         
@@ -235,7 +250,7 @@ NEXT SIDE:
           </pre>
       </div> <!-- END SIDE TWO -->
 
-<!-- ============================== side -THREE=================================== -->
+  <!-- ============================== side -THREE=================================== -->
 
       <div id='side-three' class="step chris-step" data-x='0' data-y='0' data-z='-600' data-rotate-z='10' data-rotate-x='180' data-scale='1'>
         
@@ -260,7 +275,7 @@ NEXT SIDE:
           </pre>
       </div> <!-- END SIDE THREE -->
 
-<!-- ================================= side - FOUR ========================= -->
+  <!-- ================================= side - FOUR ========================= -->
 
       <div id='side-four' class="step chris-step" data-x='-50' data-y='300' data-z='-300' data-rotate-x='270' data-rotate-z='10' data-scale='1'>
         
@@ -279,10 +294,11 @@ CURRENT SIDE:
           </pre>
       </div> <!-- END SIDE FOUR -->
 
-<!-- ================================= side - FIVE =================================== -->
+  <!-- ================================= side - FIVE =================================== -->
 
       <div id='side-five' class="step chris-step" data-x='-10000' data-y='-1763' data-z='-250' data-rotate-y='-90' data-rotate-x='10'>
   
+          
         <h3 class='code-content'>
           PSYCHE!!!
         </h3>
@@ -300,9 +316,9 @@ CURRENT SIDE:
           </pre>  
       </div>
 
-<!-- ================================= overview SLIDE =================================== -->
+  <!-- ================================= overview SLIDE =================================== -->
 
-    <!-- ============================ Chris Slides end here ====================== -->
+  <!-- ============================ Chris Slides end here ====================== -->
 
       <div id='overview' class="step" data-scale='10'></div>
 
