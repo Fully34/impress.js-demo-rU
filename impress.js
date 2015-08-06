@@ -126,7 +126,6 @@
             rY = " rotateY(" + r.y + "deg) ",
             rZ = " rotateZ(" + r.z + "deg) ";
         
-
         return !revert ? rZ+rY+rX : rX+rY+rZ; //> HACKED THIS SHIT --> HELP FROM MORGAN
 
     };
@@ -196,6 +195,9 @@
 
     // This is where the root elements of all impress.js instances will be kept.
 
+
+    
+    // This is where the root elements of all impress.js instances will be kept.
     // Yes, this means you can have more than one instance on a page, but I'm not
     // sure if it makes any sense in practice ;)
     var roots = {};
@@ -697,7 +699,9 @@
                 event.preventDefault();
             }
         }, false);
-  // Trigger impress action (next or prev) on keyup.
+
+        // Trigger impress action (next or prev) on keyup.
+
         
         // Supported keys are:
         // [space] - quite common in presentation software to move forward
@@ -810,4 +814,5 @@
 // Or thanks for scrolling down and reading the last part.
 //
 // I've learnt a lot when building impress.js and I hope this code and comments
+// will help somebody learn at least some part of it.
 // will help somebody learn at least some part of it.
