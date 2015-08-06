@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Peer-Group Impress Presentation</title>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
   </head>
 
@@ -13,19 +13,20 @@
 
     <div id="impress">
         
-        <div id="big" class="step Ash" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <div id="big" class="step Ash" data-x="3500" data-y="2100" data-rotate="180" data-scale="4">
             <pre>
-              <p><b>And now...</b>it get's very exciting! We move into third dimension!
+              <p><b>And now...</b>it get's very exciting! We move into the third dimension!
               <p>Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with `data-z`.</p>
-              <code>&ltdiv id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6"a&gt</code>
+              <p>This next slide's HTML code is positioned away from us by -3000px</p>
+              <code>&ltdiv id="tiny" class="step Ash" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1"&gt</code>
             </pre>
         </div>
 
 
       <div id="tiny" class="step Ash" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
           <pre>           
-            <h3>CSS Transformation Syntax</h3>
-            <p>The element should be positioned far away from us (by 3000px).</p>
+            <h3>CSS Transformation Syntax in Javascript</h3>
+            <p>The code below is an example of a CSS Transformation in Javascript:</p>
             <code>     css(el, {
                 position: "absolute",
                 transform: "translate(-50%,-50%)" +
@@ -33,8 +34,8 @@
                            rotate(step.rotate) +
                            scale(step.scale),
                 transformStyle: "preserve-3d"
-            });
-        }; </code>
+            })
+          </code>
           </pre>
       </div>
       
@@ -167,6 +168,8 @@ CURRENT SIDE:
     
 
     <!--  add and initialize impress.js -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/Dogfalo/materialize/master/dist/js/materialize.min.js"></script>
     <script type='text/javascript' src='impress.js'></script>
     <script type='text/javascript'>impress().init();</script>
 
