@@ -18,6 +18,10 @@ body {
   background-size: cover;
 }
 
+.break {
+  border: 1px solid #03FF00;
+}
+
 /*==============================  laura styles  =============================*/
         
 .laura {
