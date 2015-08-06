@@ -87,3 +87,11 @@ p {
 	transition-duration: 0.95s;
 }
 
+
+.steve {
+	font-size: 100%;
+	color: white;
+    background: black;
+    border-radius: 7%;
+    padding: 5em;
+}
