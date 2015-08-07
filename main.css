@@ -21,7 +21,7 @@ h2 {
 }
 
 body {
-  background-image: url(http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/amazing-autumn-trees-wide-high-definition-wallpaper-for-desktop-background-download-autumn-trees-pictures-free.jpg);
+  background-image: url(http://www.wallpapers4u.org/wp-content/uploads/planets_stars_rays_galaxy_65145_1920x1080.jpg);
   background-size: cover;
 }
 
@@ -52,10 +52,6 @@ body {
   box-shadow: 0px 0px 30px 1px rgba(3,255,0,1);
 }
 
-code {
-  background-color: #535751;
-
-}
 
 .step.active {
   opacity: 1;
@@ -67,17 +63,13 @@ code {
 
 /*==============================  ronan styles  =============================*/
         
-p {
+/*p {
 	font-size: 24px;
-}
+}*/
 
 .ing.present .rotating {
 	transition-delay: 1s;
 	transform: rotate(-360deg);
-}
-.ing.present .rotating-2 {
-	transition-delay: 0.5s;
-	transform: rotate(190deg);
 }
 
 .ing.present .positioning-1 {
@@ -95,12 +87,12 @@ p {
 }
 
 .ing.present .scaling-2 {
-	transform: scale(1.5);
+	transform: scale(1.9);
 	transition-delay: 0.5s;
 }
 
 .ing.present .scaling-3 {
-	transform: scale(2);
+	transform: scale(2.3);
 	transition-delay: 0.7s;
 }
 
@@ -109,6 +101,10 @@ p {
 	transition-duration: 0.95s;
 }
 
+.ing {
+  font-size: 40px;
+  text-shadow: 0px 0px 2px #fff;
+}
 
 .steve {
 	font-size: 100%;
