@@ -1,10 +1,18 @@
-
+/*=================== ash styles ==================*/
 .Ash {
-    background: lightpink;
+    background: #F5A9BC;
     border-radius: 10%;
     padding: 10em;
 }
 
+h1 {
+  background: #F4FA58;
+  font-size: 24px;
+}
+
+h2 {
+  font-color: 35px;
+}
 
 /*==============================  utility  =============================*/
         
