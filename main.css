@@ -1,7 +1,7 @@
 /*=================== ash styles ==================*/
 .Ash {
-    background: #F5A9BC;
-    border-radius: 10%;
+    background-color: rgba(200, 54, 54, 0.6);
+    border-radius: 20%;
     padding: 10em;
 }
 
